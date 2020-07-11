@@ -1,5 +1,5 @@
 //Local
-// export const apiUrl = "http://localhost:8000/api/post/";
+// export const apiUrl = "http://localhost:8000/api/post/ ";
 //Live
 export const apiUrl = "https://shoppingcrt-backend.herokuapp.com/api/post/";
 export const addToCart = (item) => {
