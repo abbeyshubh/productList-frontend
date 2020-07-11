@@ -1,0 +1,79 @@
+.search {
+  border-radius: 0 2px 2px 0 !important;
+  /* position: absolute; */
+  font-weight: 500;
+  height: 45px;
+  padding: 0 21px;
+  text-transform: uppercase;
+  border: medium none;
+  font-size: 13px;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: -3.5px;
+  vertical-align: middle;
+  user-select: none;
+  line-height: 1.5;
+  background: linear-gradient(135deg, #ff934b 0%, #ff5e62 100%);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  opacity: 1 !important;
+}
+input[type="search"].header2_search {
+  border: medium none;
+  font-size: 13px;
+  height: 45px;
+  color: #495057;
+  width: 75%;
+  font-size: 14px;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  line-height: 100%;
+  padding: 0px 15px;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+input[type="search"].header2_search::placeholder {
+  font-style: italic;
+}
+
+.header2_image {
+  padding: 10px 0px;
+}
+
+.header2_cartCircle {
+  background-color: #ffffff;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  /* cursor: pointer; */
+}
+.myCart {
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 24;
+}
+.cart {
+  justify-content: right;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.cartItems {
+  background-color: #ff5e62;
+  position: absolute;
+  /* right: -2px; */
+  color: white;
+  border-radius: 25px;
+  width: 15px;
+  height: 15px;
+  top: 13px;
+  /* bottom: auto; */
+  left: 35px;
+  font-size: x-small;
+  text-align: center;
+  /* cursor: pointer; */
+}

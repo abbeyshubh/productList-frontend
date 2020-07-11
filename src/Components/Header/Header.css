@@ -1,0 +1,15 @@
+.header_strip {
+  background-color: "#171b20";
+  height: auto;
+  max-width: 100%;
+}
+.fontColorSize {
+  font-size: 13px;
+  color: "#ffffff";
+  font-family: "Maven Pro", sans-serif;
+  line-height: 25px;
+  text-decoration: "none";
+}
+a:hover {
+  text-decoration: "none";
+}

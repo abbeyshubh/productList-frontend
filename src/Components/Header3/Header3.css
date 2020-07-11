@@ -1,0 +1,47 @@
+.header3_margin {
+  margin: auto !important;
+  display: flex;
+  position: sticky;
+}
+.header3_margin > li {
+  list-style-type: none;
+  font-size: 13px;
+  color: #666;
+  position: relative;
+  cursor: pointer;
+  padding: 12px 8px;
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  box-sizing: content-box;
+  transition: color 0.5s;
+}
+.header3_dropItems {
+  list-style-type: none;
+  font-size: 13px;
+  color: #666;
+  position: relative;
+  cursor: pointer;
+  padding: 12px 8px;
+  margin: auto;
+  font-weight: 600;
+  box-sizing: content-box;
+  transition: color 0.5s;
+}
+.header3_dropDown {
+  box-shadow: 1px 0px 2px 0px;
+  padding: 0 !important;
+  position: absolute;
+  margin-top: 45px;
+  width: 200px;
+  background-color: #fff;
+}
+.header3_dropDown li {
+  padding: 15px 30px 15px 15px;
+  align-content: left;
+}
+.header3_margin li:hover {
+  display: block;
+  background: linear-gradient(135deg, #ff934b 0%, #ff5e62 100%);
+  color: #fff;
+}

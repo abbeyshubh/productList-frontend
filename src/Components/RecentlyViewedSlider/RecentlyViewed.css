@@ -1,0 +1,46 @@
+.recentlyViewed_border {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.side_arrow {
+  height: 45px;
+  width: 45px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #090979 0%, #00ffc0 100%);
+  font-size: 27px;
+  color: #eee;
+  text-align: center;
+  cursor: pointer;
+}
+.recentlyViewed_image_background {
+  height: 100px;
+  width: 100px;
+  border-radius: 36px;
+  box-shadow: 1px 0px 2px 0px;
+  display: block;
+  margin: auto;
+
+  /* margin: "auto"; */
+}
+/* .recentlyViewed_image_background:hover {
+  background: linear-gradient(135deg, #ff934b 0%, #ff5e62 100%);
+} */
+.recentlyViewed_title {
+  font-size: 13px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* margin: "auto"; */
+  text-align: center;
+}
+
+.carousel-button-group {
+  position: absolute;
+  display: flex;
+  width: 100%;
+}
+.recently_viewed_heading {
+  margin-top: 40px;
+}

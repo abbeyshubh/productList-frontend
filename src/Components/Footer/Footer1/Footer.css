@@ -1,0 +1,11 @@
+.footer_strip {
+  background: linear-gradient(135deg, #1d1f22 1%, #57585a 100%);
+  color: #eee;
+  text-align: center;
+  padding: 10px;
+  font-family: auto;
+  cursor: pointer;
+}
+.footer_strip:hover {
+  opacity: 0.9;
+}

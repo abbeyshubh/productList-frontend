@@ -1,0 +1,33 @@
+.descBox {
+  padding: 0px 5px 0px 20px;
+}
+
+.add_cart_button {
+  cursor: pointer;
+  justify-content: center;
+  border-radius: 25px;
+  color: #eee;
+  padding: 10px 50px;
+  background: linear-gradient(135deg, #ff934b 0%, #ff5e62 100%);
+}
+
+.add_cart_button:focus {
+  outline: none;
+}
+.productName {
+  font-size: 40px;
+  color: #666;
+  font-family: serif;
+}
+
+.price {
+  font-size: 20px;
+  color: #666;
+  font-family: serif;
+}
+.description {
+  font-size: 20px;
+  color: #666;
+  font-family: serif;
+  text-align: left;
+}
