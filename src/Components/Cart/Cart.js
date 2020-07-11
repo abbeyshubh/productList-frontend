@@ -10,6 +10,13 @@ import CartItems from "./CartItems";
 import { connect } from "react-redux";
 import Popup from "../AddImage/popup";
 import AlertPopup from "../AddImage/AlertPopup";
+
+const mapStateToProps = (state) => {
+  console.log(state.OrderReducer);
+  return {
+    ...state.OrderReducer,
+  };
+};
 function Cart(props) {
   const { saveOrders, orderList, location, history } = props;
   const [session, setSession] = useState([]);
@@ -28,7 +35,17 @@ function Cart(props) {
     if (sessionItem.length) {
       setSession(sessionItem);
     }
+    return () => {};
   }, []);
+  useEffect(() => {
+    let status = 0;
+    if (orderList.status) {
+      status = submitStatus(status);
+    } else {
+      status = 400;
+    }
+    setDb(status);
+  }, [orderList]);
   const doneMessage =
     "You have successfully purchased " +
     qty +
@@ -86,39 +103,34 @@ function Cart(props) {
     setPerSessionQuantity(deletedSession[0].quantity);
     showPopup(true);
   };
-  const submitStatus = async (status) => {
-    if (props.orderList.status === 200) {
-      status = 200;
-      localStorage.removeItem("cartItem");
-      setSession([]);
-    } else {
-      status = 400;
-    }
+  const submitStatus = (status) => {
+    status = 200;
+    localStorage.removeItem("cartItem");
+    setSession([]);
     return status;
   };
 
   const saveOrder = async (e, arr) => {
     e.preventDefault();
     let status = 0;
-    if (arr.length > 0) {
-      await saveOrders({ orders: arr }).then((res) => {
-        alert(JSON.stringify(res));
-      });
-      // alert(await submitStatus(status));
+    if (session.length > 0) {
+      await saveOrders({ orders: session });
     } else {
       status = 400;
     }
-
     setDb(status);
   };
+
   const closePopup = () => {
     showPopup(false);
   };
 
   if (dbStatus === 200) {
-    return <Popup head="Congratulations !" body={doneMessage} foot="/" />;
-  } else if (!session.length) {
-    return <Popup head="Oops !" body={blankMessage} foot="/" />;
+    return (
+      <Popup {...props} head="Congratulations !" body={doneMessage} foot="/" />
+    );
+  } else if (!session.length && dbStatus !== 200) {
+    return <Popup {...props} head="Oops !" body={blankMessage} foot="/" />;
   }
 
   if (popup) {
@@ -143,11 +155,11 @@ function Cart(props) {
       )}
 
       <div className="cart_header">
-        {dbStatus === 200 ? (
+        {/* {dbStatus === 200 ? (
           <Popup head="Congratulations !" body={doneMessage} foot="/" />
         ) : (
           ""
-        )}
+        )} */}
 
         <div className="row cart_heading">
           Cart : <b>{qty} Items</b>
@@ -199,11 +211,7 @@ function Cart(props) {
     </div>
   );
 }
-const mapStateToProps = (state) => {
-  return {
-    ...state.OrderReducer,
-  };
-};
+
 const mapDispatchToProps = {
   saveOrders,
 };

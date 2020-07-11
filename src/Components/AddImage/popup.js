@@ -13,12 +13,12 @@ function Popup(props) {
           <b style={{ padding: "27px" }}>{body}</b>
         </div>
         <div className="row ">
-          <button className="add_cart_button" style={{ margin: "auto" }}>
-            <b>
-              <Link to={{ pathname: "/" }} style={{ color: "#eee" }}>
-                Okay!
-              </Link>
-            </b>
+          <button
+            className="add_cart_button"
+            onClick={() => props.history.push("/")}
+            style={{ margin: "auto" }}
+          >
+            <b style={{ color: "#eee" }}>Okay!</b>
           </button>
         </div>
       </div>

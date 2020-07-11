@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Header2.css";
 import { Link } from "react-router-dom";
+import MediaQuery from "react-responsive";
 function Header2(props) {
   const { qty, returnUrl } = props;
   return (
@@ -15,7 +16,7 @@ function Header2(props) {
       <div className="container">
         <div className="row">
           <div
-            className="col-xs-6 col-md-3"
+            className="col-xs-3 col-md-3"
             style={{ verticalAlign: "middle" }}
           >
             <img
@@ -24,7 +25,7 @@ function Header2(props) {
               className="header2_image"
             />
           </div>
-          <div className="col-xs-9 col-md-6">
+          <div className="col-xs-9 col-md-6 dispayMax">
             <div style={{ padding: "5px" }}>
               <input
                 type="search"
@@ -36,7 +37,7 @@ function Header2(props) {
               </button>
             </div>
           </div>
-          <div className="col-md-3">
+          <div className="col-xs-3 col-md-3">
             <div className="row cart">
               {/* <div style={{ cursor: "pointer" }}> */}
 
@@ -44,26 +45,27 @@ function Header2(props) {
                 className="col-md-6"
                 style={{ float: "right", textAlign: "-webkit-right" }}
               >
-                <div className="header2_cartCircle">
-                  <div className="header2_cartIcon">
-                    <i
-                      className="fa fa-shopping-cart"
-                      style={{
-                        position: "absolute",
-                        fontSize: 24,
-                        top: 8,
-                        left: 8,
-                        color: "#ff7458",
-                      }}
-                      aria-hidden="true"
-                    ></i>
+                <Link to={{ pathname: "/cart", returnUrl: returnUrl }}>
+                  <div className="header2_cartCircle">
+                    <div className="header2_cartIcon">
+                      <i
+                        className="fa fa-shopping-cart"
+                        style={{
+                          position: "absolute",
+                          fontSize: 24,
+                          top: 8,
+                          left: 8,
+                          color: "#ff7458",
+                        }}
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <div className="cartItems">
+                      <b>{qty}</b>
+                    </div>
                   </div>
-                  <div className="cartItems">
-                    <b>{qty}</b>
-                  </div>
-                </div>
+                </Link>
               </div>
-
               <div className="col-md-6" style={{ paddingLeft: "0" }}>
                 <Link to={{ pathname: "/cart", returnUrl: returnUrl }}>
                   <div

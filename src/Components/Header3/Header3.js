@@ -45,12 +45,12 @@ function Header3(props) {
         ) : (
           ""
         )} */}
-        <li className="col-md-2">About Us</li>
-        <li className="col-md-2">Grocery</li>
-        <li className="col-md-3">Fruits & Vegetables</li>
-        <li className="col-md-1">Shop</li>
-        <li className="col-md-1">FAQ</li>
-        <li className="col-md-2"> Contact</li>
+        <li className="col-md-4">About Us</li>
+        {/* <li className="col-md-2">Grocery</li> */}
+        <li className="col-md-5">Fruits & Vegetables</li>
+        {/* <li className="col-md-1">Shop</li>
+        <li className="col-md-1">FAQ</li> */}
+        <li className="col-md-3"> Contact</li>
       </ul>
     </div>
   );
